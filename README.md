@@ -13,7 +13,19 @@ Structure of the project:
 
 ## Getting Started:
 
-1. Create a new ECR Repository: `cd base && pulumi up`
+Pre-requisite:
+
+- Install Pulumi (`brew install pulumi` on MacOs if using Brew)
+
+1. Create a new ECR Repository:
+
+```
+
+cd base
+pulumi install # Just once
+pulumi up
+
+```
 
 2. Clone https://github.com/afavre/ts-express-app and follow getting started
 
@@ -21,6 +33,7 @@ Structure of the project:
 
 ```
 cd long-task
+pulumi install # Just once
 pulumi config set long-task:imageUri <value> //set the repository you created in the base directory (output of the pulumi command)
 pulumi config set long-task:imageTag <value> //set the tag of the image you pushed in the previous repo
 pulumi up
@@ -43,4 +56,5 @@ Response:
 - Configurable VPC (currently gets the default VPC)
 - Internal ALB to only allow access through API Gateway
 - Authentication and Rate limiting on the API Gateway
+
 # pulumi-aws-fargate
