@@ -43,3 +43,4 @@ Response:
 - Configurable VPC (currently gets the default VPC)
 - Internal ALB to only allow access through API Gateway
 - Authentication and Rate limiting on the API Gateway
+# pulumi-aws-fargate
